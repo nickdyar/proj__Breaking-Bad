@@ -1,32 +1,33 @@
-import React from 'react'
+import React from 'react';
 
-const CharacterItem = ({ item }) => {
+const CharacterItem = ({ character }) => {
+  // console.log(character);
   return (
-    <div className='card'>
-      <div className='card-inner'>
-        <div className='card-front'>
-          <img src={item.img} alt='' />
+    <div className="card">
+      <div className="card-inner">
+        <div className="card-front">
+          <img src={character.img} alt="" />
         </div>
-        <div className='card-back'>
-          <h1>{item.name}</h1>
-          <ul>
-            <li>
-              <strong>Actor Name:</strong> {item.portrayed}
-            </li>
-            <li>
-              <strong>Nickname:</strong> {item.nickname}
-            </li>
-            <li>
-              <strong>Birthday:</strong> {item.birthday}
-            </li>
-            <li>
-              <strong>Status:</strong> {item.status}
-            </li>
-          </ul>
+        <div className="card-back">
+          <h1>{character.name}</h1>
+            <ul>
+              <li>
+              <strong>Actor:</strong> {character.portrayed}
+              </li>
+              <li>
+              <strong>Nickname:</strong> {character.nickname}
+              </li>
+              <li>
+              <strong>Birthday:</strong> {character.birthday}
+              </li>
+              <li>
+              <strong>Status:</strong> {character.status}
+              </li>
+            </ul>
         </div>
       </div>
     </div>
   )
 }
 
-export default CharacterItem
+export default CharacterItem;
