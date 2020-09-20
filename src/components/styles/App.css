@@ -22,9 +22,8 @@ img {
 }
 
 body {
-  background: url(../../img/bg3.png) #323232;
-  /* background-blend-mode: color-dodge; */
-  background-blend-mode: exclusion;
+  background: #28242f url(../../img/bg3.png) repeat center center/cover;
+  background-blend-mode: color-dodge;
   filter: saturate(1.2);
   margin: 0;
   padding: 0;
@@ -36,22 +35,31 @@ body {
   font-size: 1.6rem;
 }
 
+#root {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 100%;
+  align-items: center;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  max-width: 1100px;
-  margin: auto;
+  align-items: center;
+  margin: 0 1rem;
+  padding: 1rem 2rem;
 }
 
 header {
   display: flex;
   align-items: center;
-  max-width: 800px;
-  width: 70%;
-  margin-top: 40px;
-  margin-left: auto;
-  margin-right: auto;
+  justify-content: space-between;
+  max-width: 900px;
+  margin-top: 1rem;
+  /* margin-left: auto;
+  margin-right: auto; */
   padding: 0;
 }
 
@@ -59,33 +67,40 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
+  max-width: 170px;
+  min-width: 135px;
   padding: 1rem;
-  max-width: 100%;
 }
 
 .intro {
-  font-size: clamp(2rem, 4.5vw, 6rem);
-  margin: 0 auto;
+  font-size: clamp(3rem, 4vw + 1rem, 6rem);
+  margin-left: 1rem;
+  width: 100%;
   padding: 0;
+  font-weight: 600;
+  color: #e2e2e2;
 }
 
 .search {
   height: 100px;
-  margin: 0;
+  width: 100%;
+  margin: 3rem auto;
   padding: 0;
 }
 
 input[ type= "text" ] {
   display: block;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   border: 0;
-  width: 60%;
-  padding: 1rem 1.6rem;
+  min-width: 320px;
+  width: 80%;
+  padding: 1.2rem 1.6rem;
   max-width: 800px;
-  margin: 20px auto;
-  border-radius: 1.2rem;
-  box-shadow: 4px 4px 12px -1px rgba(21, 255, 177, 0.6);
+  margin: 0 auto;
+  border-radius: 1000px;
+  box-shadow:
+    0 10px 40px -1px rgba(21, 255, 177, 0.6),
+    1px 2px 12px 0 rgba(21, 255, 177, 0.8);
 }
 
 input[ type= "text" ]:focus {
@@ -95,25 +110,26 @@ input[ type= "text" ]:focus {
 .cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  padding: 10px;
-  margin: 10px;
+  gap: 2rem;
+  width: 90vw;
+  padding: 1rem;
+  margin: 0 auto;
 }
 
 .card {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
+  height: 360px;
+  width: 100%;
   background-color: transparent;
-  height: 320px;
   perspective: 1000px;
 }
 
 .card__title {
-  min-width: 0;
-  font-size: clamp(1.8rem, 2.4rem, 3rem);
+  font-size: clamp(2rem, 2.6rem, 3rem);
   border-bottom: 2px #fafafa solid;
   padding-bottom: 10px;
   margin-bottom: 10px;
@@ -121,7 +137,7 @@ input[ type= "text" ]:focus {
 
 .card__img {
   width: 100%;
-  height: 320px;
+  height: 360px;
   object-fit: cover;
   object-position: top;
 }
@@ -150,29 +166,29 @@ input[ type= "text" ]:focus {
 .card__back {
   background-color: #17141d;
   color: #f2f2f2;
-  padding: 2rem;
+  padding: 3rem;
   transform: rotateY(180deg);
 }
 
 .card__list {
   list-style: none;
   margin: 0;
-  padding: 1rem 0;
+  padding: 1rem 0.5rem;
 }
 
 .card__item {
-  font-size: clamp(1rem, 1vw + 1rem, 1.6rem);
+  font-size: clamp(1.6rem, 1vw + 1rem, 2rem);
   margin: 0;
   padding-bottom: 6px;
 }
 
 @media screen and (min-width:1440px) {
   .logo {
-    max-width: ;
+    max-width: 200px;
   }
 }
 
-@media screen and (max-width:959px) {
+@media screen and (max-width:960px) {
   .cards {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -180,13 +196,7 @@ input[ type= "text" ]:focus {
 
 @media screen and (max-width:767px) {
   .logo {
-    max-height: 100px;
-  }
-}
-
-@media screen and (max-width:639px) {
-  .logo {
-    max-width: 128px;
+    max-width: 150px;
   }
 
   .cards {
@@ -198,10 +208,16 @@ input[ type= "text" ]:focus {
   .cards {
     grid-template-columns: 1fr;
   }
-}
 
-@media (max-width:420px) {
+  .logo {
+    max-width: 120px;
+  }
+
   .card {
-    max-height: 300px;
+    max-width: 320px;
+  }
+
+  .card__img {
+    max-width: 320px;
   }
 }
