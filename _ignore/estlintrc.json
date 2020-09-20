@@ -1,0 +1,66 @@
+{
+  "env": {
+    "browser": true,
+    "es2020": true,
+    "node": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "prettier",
+    "prettier/react"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 11,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "babel", "react-hooks", "prettier", "import"],
+  "rules": {
+    "babel/new-cap": 1,
+    "babel/camelcase": 1,
+    "babel/no-invalid-this": 1,
+    "babel/object-curly-spacing": 0,
+    "babel/quotes": 0,
+    "babel/semi": 1,
+    "babel/no-unused-expressions": 1,
+    "babel/valid-typeof": 1,
+    "no-console": "warn",
+    "no-eval": "error",
+    "import/first": "error"
+},
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "react/prop-types": 0,
+    "no-unused-vars": [
+      "error",
+      {
+        "vars": "local",
+        "args": "none"
+      }
+    ],
+    "react-hooks/rules-of-hooks": "error", // checks rules of Hooks
+    "react-hooks/exhaustive-deps": "warn", // checks effect dependencies
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 90,
+        "endOfLine": "lf",
+        "jsxBracketSameLine": true,
+        "bracketSpacing": true,
+        "semi": true,
+        "singleQuote": false,
+        "useTabs": false,
+        "tabWidth": 2,
+        "trailingComma": "es5"
+      }
+    ]
+  }
+}
