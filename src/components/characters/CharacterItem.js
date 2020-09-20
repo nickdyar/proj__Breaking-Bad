@@ -4,23 +4,23 @@ const CharacterItem = ({ character }) => {
   // console.log(character);
   return (
     <div className='card'>
-      <div className='card-inner'>
-        <div className='card-front'>
-          <img src={character.img} className='card-img' alt='' />
+      <div className='card__inner'>
+        <div className='card__front'>
+          <img src={character.img} className='card__img' alt='' />
         </div>
-        <div className='card-back'>
-          <h1 className='card-title'>{character.name}</h1>
-            <ul className='card-list'>
-              <li className='card-item'>
+        <div className='card__back'>
+          <h1 className='card__title'>{character.name}</h1>
+            <ul className='card__list'>
+              <li className='card__item'>
               <strong>Actor:</strong> {character.portrayed}
               </li>
-              <li className='card-item'>
+              <li className='card__item'>
               <strong>Nickname:</strong> {character.nickname}
               </li>
-              <li className='card-item'>
-              <strong>Occupation:</strong> {character.occupation}
+              <li className='card__item'>
+              <strong>Birthday:</strong> {character.birthday}
               </li>
-              <li className='card-item'>
+              <li className='card__item'>
               <strong>Status:</strong> {character.status}
               </li>
             </ul>
