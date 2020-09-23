@@ -1,7 +1,7 @@
 :root {
   font-size: 62.5%;
   --ff-primary: "pulpo-rust-50";
-  --ff-secondary: "input mono narrow";
+  --ff-secondary: "input-mono-narrow";
 }
 
 *,
@@ -17,6 +17,10 @@ img {
   border-style: none;
   max-width: 100%;
   height: auto;
+}
+
+strong {
+  font-weight: 800;
 }
 
 html,
@@ -44,31 +48,28 @@ body {
 header {
   display: flex;
   align-items: center;
-  max-width: clamp(320px, 80vw - 1rem, 800px);
+  width: min(max(80vw + 1rem), 70rem);
   margin-left: auto;
   margin-right: auto;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
 }
 
-.logo {
+.header__logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: clamp(100px, 90%, 180px);
-  flex: 1;
+  width: min(max(25vw + 1rem, 10rem), 18rem);
+  padding: 1rem;
 }
 
-
-.intro {
-  font-size: clamp(1.8rem, 3vw + 1rem, 6.8rem);
+.header__title {
+  font-size: min(max(3vw + 1rem, 2.2rem), 5.6rem);
   font-family: var(--ff-primary);
   text-align: center;
+  color: #fafafa;
+  margin: auto;
   width: 100%;
-  padding: 0;
-  color: #ffffff;
-  margin: 0 auto;
-  flex: 4;
 }
 
 .search__wrapper {
@@ -76,25 +77,25 @@ header {
   flex-flow: row;
   align-items: center;
   justify-content: center;
-  height: 100px;
   width: 100%;
-  margin-bottom: 1.6rem;
+  margin-bottom: 2rem;
 }
 
-form {
+.search__form {
   display: flex;
   align-items: stretch;
-  width: clamp(10rem, 50vw + 1rem, 80rem);
+  width: min(max(70vw + 1rem, 20rem), 70rem);
 }
 
 .search__input {
   font-family: var(--ff-secondary);
   width: 100%;
-  font-size: 1.4rem;
+  font-size: min(max(3vw, 1.2rem), 1.6rem);
   font-weight: 300;
   border: 0;
   padding: 1rem 1.6rem;
-  border-radius: 1000px;
+  margin-bottom: 1rem;
+  border-radius: 100px;
 }
 
 .search__input:focus {
@@ -108,13 +109,12 @@ form {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   place-items: center;
-  margin: 0 1.2rem;
+  padding: 0 1.4rem;
   gap: 1.6rem;
 }
 
 .card {
   height: max(320px, 340px);
-  /* width: clamp(300px, 70vw + 1rem, 320px); */
   width: 100%;
   max-width: 280px;
   background-color: transparent;
@@ -131,7 +131,7 @@ form {
 }
 
 .card__title {
-  font-size: clamp(2rem, 2.4rem, 3rem);
+  font-size: min(max(4vw + 0.4rem, 2.4rem), 2.8rem);
   font-family: var(--ff-primary);
   color: #fafafa;
   border-bottom: 3px solid #fbfbfb;
@@ -175,7 +175,8 @@ form {
 
 .card__item {
   font-family: var(--ff-secondary);
-  font-size: clamp(1.4rem, 1.6rem, 2rem);
+  /* font-size: clamp(1.4rem, 1.6rem, 2rem); */
+  font-size: min(2vw + 1rem, 1.4rem);
   margin: 0;
   padding-bottom: 1rem;
 }
