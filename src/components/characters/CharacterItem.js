@@ -1,9 +1,8 @@
 import React from 'react';
 
 const CharacterItem = ({ character }) => {
-  // console.log(character);
   return (
-    <div className='card'>
+    <article className='card'>
       <div className='card__inner'>
         <div className='card__front'>
           <img src={character.img} className='card__img' alt='' />
@@ -18,7 +17,7 @@ const CharacterItem = ({ character }) => {
               <strong>Nickname:</strong> {character.nickname}
               </li>
               <li className='card__item'>
-              <strong>Birthday:</strong> {character.birthday}
+              <strong>Birthdate:</strong> {character.birthday}
               </li>
               <li className='card__item'>
               <strong>Status:</strong> {character.status}
@@ -26,7 +25,7 @@ const CharacterItem = ({ character }) => {
             </ul>
         </div>
       </div>
-    </div>
+    </article>
   )
 }
 

@@ -2,7 +2,6 @@ import React from 'react';
 import Spinner from '../ui/Spinner';
 import CharacterItem from './CharacterItem';
 
-// const CharacterGrid = (props.characters, isLoading)
 const CharacterGrid = ({ characters, isLoading }) => {
   return isLoading ? (
     <Spinner />

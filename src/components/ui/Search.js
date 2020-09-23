@@ -10,19 +10,23 @@ const Search = ({ getQuery }) => {
   }
 
   return (
-    <section className="search">
+  <section className="search">
+    <div className="search__wrapper">
       <form>
         <input
-          type="text"
-          className="form-control"
+          type='text'
+          className='form-control'
           placeholder="search by name"
           value={text}
           onChange={(e) => onChange(e.target.value)}
           autoFocus
-          >
+          aria-label='search'
+          autoComplete='off'
+        >
         </input>
       </form>
-    </section>
+    </div>
+  </section>
   )
 }
 
