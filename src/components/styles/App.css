@@ -21,6 +21,7 @@ img {
 
 strong {
   font-weight: 800;
+  font-size: min(max(3vw + 0.4rem, 1.6rem), 1.6rem);
 }
 
 html,
@@ -40,31 +41,30 @@ body {
 
 
 .container {
-  max-width: 1100px;
-  width: 100%;
+  width: min(max(85vw + 1rem, 20rem), 120rem);
   margin: 0 auto;
 }
 
 header {
   display: flex;
   align-items: center;
-  width: min(max(80vw + 1rem), 70rem);
+  width: min(max(80vw + 1rem), 80rem);
   margin-left: auto;
   margin-right: auto;
   margin-top: 4rem;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .header__logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: min(max(25vw + 1rem, 10rem), 18rem);
-  padding: 1rem;
+  width: min(max(20vw + 1rem, 9rem), 18rem);
+  padding: 0.8rem;
 }
 
 .header__title {
-  font-size: min(max(3vw + 1rem, 2.2rem), 5.6rem);
+  font-size: min(max(4vw + 0.8rem, 2.2rem), 5.6rem);
   font-family: var(--ff-primary);
   text-align: center;
   color: #fafafa;
@@ -78,7 +78,7 @@ header {
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .search__form {
@@ -107,36 +107,36 @@ header {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   place-items: center;
-  padding: 0 1.4rem;
+  /* padding: 0 1.4rem; */
   gap: 1.6rem;
 }
 
 .card {
-  height: max(320px, 340px);
+  height: max(32rem, 34rem);
   width: 100%;
-  max-width: 280px;
+  max-width: 30rem;
   background-color: transparent;
-  perspective: 1000px;
+  perspective: 100rem;
   cursor: pointer;
 }
 
 .card__img {
   height: max(320px, 340px);
   width: 100%;
-  max-width: 280px;
+  max-width: 300px;
   object-fit: cover;
   object-position: top;
 }
 
 .card__title {
-  font-size: min(max(4vw + 0.4rem, 2.4rem), 2.8rem);
+  font-size: min(max(3vw + 1rem, 2.2rem), 2.6rem);
   font-family: var(--ff-primary);
   color: #fafafa;
-  border-bottom: 3px solid #fbfbfb;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
+  border-bottom: 0.25rem solid #fbfbfb;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .card__inner {
@@ -175,8 +175,7 @@ header {
 
 .card__item {
   font-family: var(--ff-secondary);
-  /* font-size: clamp(1.4rem, 1.6rem, 2rem); */
-  font-size: min(2vw + 1rem, 1.4rem);
+  font-size: min(max(3vw + 0.4rem, 1.6rem), 1.6rem);
   margin: 0;
   padding-bottom: 1rem;
 }
