@@ -1,1 +1,1 @@
-React project utilizing 'Breaking Bad' API.
+React app that fetches data via 'Breaking Bad' API.
