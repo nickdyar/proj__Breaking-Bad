@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e564b94c07191d36718be5dbb6d271df",
+    "revision": "15368837f92fc4bb99defb2883b44398",
     "url": "/index.html"
   },
   {
-    "revision": "e67df0945f1bc4f78581",
-    "url": "/static/css/main.4094db79.chunk.css"
+    "revision": "fda327a2ccca842e194a",
+    "url": "/static/css/main.9aa0855f.chunk.css"
   },
   {
     "revision": "cc7393bf9bda9a3b7340",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.417f8590.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e67df0945f1bc4f78581",
-    "url": "/static/js/main.72b930a5.chunk.js"
+    "revision": "fda327a2ccca842e194a",
+    "url": "/static/js/main.e05a463f.chunk.js"
   },
   {
     "revision": "4aad21eb92ea52ff6838",
@@ -28,8 +28,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/bg3.0c284c40.png"
   },
   {
-    "revision": "01b47754503a4c61de232c0fd3d090f5",
-    "url": "/static/media/logo-bb-white.01b47754.svg"
+    "revision": "7d570e23149227808ba1de07eee30ba3",
+    "url": "/static/media/logo-bb-white.7d570e23.svg"
   },
   {
     "revision": "235b9b3ed13f64542cb0792e6ae7b5c4",
