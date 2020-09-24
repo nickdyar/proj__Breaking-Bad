@@ -28,7 +28,7 @@ html,
 body {
   display: flex;
   flex-direction: column;
-  background: #28242f url(../../img/bg3.png) no-repeat center center/cover;
+  background: #28242f url(../../img/bg.jpg) no-repeat center center/cover;
   background-blend-mode: color-dodge;
   filter: saturate(1.2) contrast(0.995);
   margin: 0;
